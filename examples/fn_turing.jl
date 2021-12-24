@@ -41,3 +41,6 @@ brt = turing_inference(prob_ode_fitzhughnagumo,
 
 @btime bayesian_result_turing = turing_inference(prob_ode_fitzhughnagumo,
   Tsit5(), t,data,priors;num_samples = 2500, num_chains=4)
+
+t = @elapsed turing_inference(prob_ode_fitzhughnagumo,
+  Tsit5(), t,data,priors;num_samples = 2500, num_chains=4)
