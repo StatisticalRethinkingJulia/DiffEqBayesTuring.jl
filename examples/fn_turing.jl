@@ -1,8 +1,10 @@
-using DiffEqBayesTuring, BenchmarkTools
+using DiffEqBayesTuring, BenchmarkTools, Random
 using OrdinaryDiffEq, RecursiveArrayTools, Distributions
 using ParameterizedFunctions, Turing
 using Plots
 gr(fmt=:png)
+
+Random.seed!(123)
 
 ### Defining the problem.
 
